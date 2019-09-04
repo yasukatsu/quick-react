@@ -10,7 +10,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // 4.Appコンポーネントを実行
-ReactDOM.render(<App />, document.getElementById('root'));
+setInterval(() => {
+    ReactDOM.render(
+            <App />,
+        document.getElementById('root')
+    );
+}, 1000);
 
 // 5.サービスを有効化
 // If you want your app to work offline and load faster, you can change
