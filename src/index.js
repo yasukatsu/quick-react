@@ -10,8 +10,6 @@ import MyHello from './MyHello';
 // 3.キャッシュのためのサービスをインポート
 import * as serviceWorker from './serviceWorker';
 
-const style = {color: 'Red', backgroundColor: 'Yellow'};
-
 // 4.Appコンポーネントを実行
 setInterval(() => {
     ReactDOM.render(
