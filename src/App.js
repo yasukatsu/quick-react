@@ -5,6 +5,9 @@ import logo from './logo.svg';
 
 import './App.css';
 import MyHello from './MyHello';
+import MyAttrMulti from './MyAttrMulti';
+import MyBook from './MyBook';
+
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -17,6 +20,17 @@ function App() {
     title: 'WINGSプロジェクト'
   };
   const style = {color: 'Red', backgroundColor: 'Yellow', padding: "5px"};
+  const data = {
+    name: '山田権左衛門',
+    age: 18,
+    sex: '男',
+  };
+  const book = {
+    isbn: 'WGS-JST-001',
+    title: '速習 webpack',
+    price: 454,
+    published: 'WINGSプロジェクト'
+  };
 
   // 2.描写内容を準備
   return (
@@ -26,10 +40,15 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">
           {/* MyHelloコンポーネントにプロパティを引き渡す */}
-          <MyHello name= {name} />
+          <MyHello>
+            <b>{name}</b>
+          </MyHello>
           Reactへようこそ！
         </h1>
         <p>現在時刻は、{time}です。</p>
+
+        <MyAttrMulti {...data} />
+
         <p><a className="App-link"　href={url}>Google</a>先生に聞く</p>
         <a
           className="App-link"
@@ -40,6 +59,7 @@ function App() {
           Learn React
         </a><br/>
         <img {...attrs} /><br/>
+        <MyBook info={book} />
       </header>
     </div>
   );
