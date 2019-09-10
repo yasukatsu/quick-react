@@ -7,6 +7,7 @@ import './App.css';
 import MyHello from './MyHello';
 import MyAttrMulti from './MyAttrMulti';
 import MyBook from './MyBook';
+import MyProp, { Member } from './MyProp';
 
 
 // 1.Appコンポーネントを定義
@@ -47,6 +48,10 @@ function App() {
         </h1>
         <p>現在時刻は、{time}です。</p>
 
+        <MyProp prop1={new Member()} />
+        <MyProp prop2= "男" />
+        <MyProp prop3= "山田太郎" />
+        
         <MyAttrMulti {...data} />
 
         <p><a className="App-link"　href={url}>Google</a>先生に聞く</p>
