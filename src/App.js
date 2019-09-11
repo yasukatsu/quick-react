@@ -8,6 +8,7 @@ import MyHello from './MyHello';
 import MyAttrMulti from './MyAttrMulti';
 import MyBook from './MyBook';
 import MyProp, { Member } from './MyProp';
+import MyArticle from './MyArticle';
 
 
 // 1.Appコンポーネントを定義
@@ -32,6 +33,26 @@ function App() {
     price: 454,
     published: 'WINGSプロジェクト'
   };
+  const article = [
+    {
+      url: 'https://www.atmarkit.co.jp/ait/series/9383/',
+      title: 'Angular TIPS',
+      description: '超絶人気',
+      isNew: true
+    },
+    {
+      url: 'https://www.atmarkit.co.jp/ait/series/9383/',
+      title: 'Angular TIPS',
+      description: '超絶人気',
+      isNew: true
+    },
+    {
+      url: 'https://www.atmarkit.co.jp/ait/series/9383/',
+      title: 'Angular TIPS',
+      description: '超絶人気',
+      isNew: true
+    },
+  ];
 
   // 2.描写内容を準備
   return (
@@ -41,9 +62,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">
           {/* MyHelloコンポーネントにプロパティを引き渡す */}
-          <MyHello>
-            <b>{name}</b>
-          </MyHello>
+          <MyHello />
           Reactへようこそ！
         </h1>
         <p>現在時刻は、{time}です。</p>
@@ -66,6 +85,9 @@ function App() {
         <img {...attrs} /><br/>
         <MyBook info={book} />
       </header>
+      <main className="App-header">
+        <dl>{article.map((article) => <MyArticle {...article} />)}</dl>
+      </main>
     </div>
   );
 }
