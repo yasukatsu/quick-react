@@ -33,7 +33,7 @@ function App() {
     price: 454,
     published: 'WINGSプロジェクト'
   };
-  const article = [
+  const articles = [
     {
       url: 'https://www.atmarkit.co.jp/ait/series/9383/',
       title: 'Angular TIPS',
@@ -53,6 +53,10 @@ function App() {
       isNew: true
     },
   ];
+
+  const list = articles.map((article) =>
+    <MyArticle {...article} key={article.index}/>
+  );
 
   // 2.描写内容を準備
   return (
@@ -86,7 +90,9 @@ function App() {
         <MyBook info={book} />
       </header>
       <main className="App-header">
-        <dl>{article.map((article) => <MyArticle {...article} />)}</dl>
+        <dl>
+          {list}
+        </dl>
       </main>
     </div>
   );
