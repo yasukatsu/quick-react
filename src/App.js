@@ -9,7 +9,7 @@ import MyAttrMulti from './MyAttrMulti';
 import MyBook from './MyBook';
 import MyProp, { Member } from './MyProp';
 import MyArticle from './MyArticle';
-
+import MyEvent from './MyEvent';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -93,6 +93,7 @@ function App() {
         <dl>
           {list}
         </dl>
+        <MyEvent greet="Hello" />
       </main>
     </div>
   );
