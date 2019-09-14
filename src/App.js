@@ -44,7 +44,7 @@ function App() {
       url: 'https://www.atmarkit.co.jp/ait/series/9383/',
       title: 'Angular TIPS',
       description: '超絶人気',
-      isNew: true
+      isNew: false
     },
     {
       url: 'https://www.atmarkit.co.jp/ait/series/9383/',
