@@ -10,14 +10,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // 4.Appコンポーネントを実行
-// setInterval(() => {
+setInterval(() => {
     ReactDOM.render(
         <React.Fragment>
             <App />
         </React.Fragment>,
         document.getElementById('root')
     );
-// }, 1000);
+}, 1000);
 
 // 5.サービスを有効化
 serviceWorker.unregister();
