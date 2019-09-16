@@ -10,6 +10,10 @@ import MyBook from './MyBook';
 import MyProp, { Member } from './MyProp';
 import MyArticle from './MyArticle';
 import MyEvent from './MyEvent';
+import MyState from './MyState'
+import MyPool from './MyPool'
+import MyParent from './MyParent'
+import MyForm from './MyForm';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -69,7 +73,7 @@ function App() {
           <MyHello />
           Reactへようこそ！
         </h1>
-        <p>現在時刻は、{time}です。</p>
+        <MyState />
 
         <MyProp prop1={new Member()} />
         <MyProp prop2= "男" />
@@ -94,6 +98,9 @@ function App() {
           {list}
         </dl>
         <MyEvent greet="Hello" />
+        <MyPool />
+        <MyParent />
+        <MyForm />
       </main>
     </div>
   );
