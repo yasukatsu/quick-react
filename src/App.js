@@ -104,6 +104,7 @@ function App() {
         <MyParent />
         <MyForm />
         <MyTextarea />
+        <MySelect />
       </main>
     </div>
   );
