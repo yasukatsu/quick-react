@@ -14,6 +14,8 @@ import MyState from './MyState'
 import MyPool from './MyPool'
 import MyParent from './MyParent'
 import MyForm from './MyForm';
+import MyTextarea from './MyTextarea';
+import MySelect from './MySelect';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -101,6 +103,7 @@ function App() {
         <MyPool />
         <MyParent />
         <MyForm />
+        <MyTextarea />
       </main>
     </div>
   );
