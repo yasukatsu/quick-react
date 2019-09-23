@@ -17,6 +17,7 @@ import MyForm from './MyForm';
 import MyTextarea from './MyTextarea';
 import MySelect from './MySelect';
 import MyList from './MyList';
+import MyRadio from './MyRadio';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -107,6 +108,7 @@ function App() {
         <MyTextarea />
         <MySelect />
         <MyList />
+        <MyRadio />
       </main>
     </div>
   );
