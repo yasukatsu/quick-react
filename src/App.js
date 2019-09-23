@@ -16,6 +16,7 @@ import MyParent from './MyParent'
 import MyForm from './MyForm';
 import MyTextarea from './MyTextarea';
 import MySelect from './MySelect';
+import MyList from './MyList';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -105,6 +106,7 @@ function App() {
         <MyForm />
         <MyTextarea />
         <MySelect />
+        <MyList />
       </main>
     </div>
   );
