@@ -14,6 +14,13 @@ import MyState from './MyState'
 import MyPool from './MyPool'
 import MyParent from './MyParent'
 import MyForm from './MyForm';
+import MyTextarea from './MyTextarea';
+import MySelect from './MySelect';
+import MyList from './MyList';
+import MyRadio from './MyRadio';
+import MyCheck from './MyCheck';
+import MyCheckMulti from './MyCheckMulti';
+import MyFile from './MyFile';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -98,9 +105,16 @@ function App() {
           {list}
         </dl>
         <MyEvent greet="Hello" />
-        <MyPool />
-        <MyParent />
-        <MyForm />
+        <MyPool /><br/>
+        <MyParent /><br/>
+        <MyForm /><br/>
+        <MyTextarea /><br/>
+        <MySelect /><br/>
+        <MyList /><br/>
+        <MyRadio /><br/>
+        <MyCheck /><br/>
+        <MyCheckMulti /><br/>
+        <MyFile /><br/>
       </main>
     </div>
   );
