@@ -20,6 +20,7 @@ import MyList from './MyList';
 import MyRadio from './MyRadio';
 import MyCheck from './MyCheck';
 import MyCheckMulti from './MyCheckMulti';
+import MyFile from './MyFile';
 
 // 1.Appコンポーネントを定義
 function App() {
@@ -113,6 +114,7 @@ function App() {
         <MyRadio /><br/>
         <MyCheck /><br/>
         <MyCheckMulti /><br/>
+        <MyFile /><br/>
       </main>
     </div>
   );
