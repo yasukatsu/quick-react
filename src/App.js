@@ -4,7 +4,9 @@ import React from 'react';
 import logo from './logo.svg';
 
 // 4.ルーティング関連の機能をインポート
-import {BrowserRouter as Router, Link, Route, Swich} from "react-router-dom"
+import {BrowserRouter as Router, Link, Route} from "react-router-dom"
+
+import {BrowserRouter as  NavLink} from "react-router-dom"
 
 import './App.css';
 import MyHello from './MyHello';
@@ -25,11 +27,10 @@ import MyCheck from './MyCheck';
 import MyCheckMulti from './MyCheckMulti';
 import MyFile from './MyFile';
 import MyLife from './MyLIfe';
+import MyTopic from './MyTopic';
 
 // 1.Appコンポーネントを定義
 function App() {
-  const time = (new Date()).toLocaleString()
-  const name = "田中"
   const url = 'https://www.google.com/?hl=ja'
   const attrs = {
     src: 'http://www.wings.msn.to/image/wings.jpg',
@@ -72,6 +73,8 @@ function App() {
   const list = articles.map((article) =>
     <MyArticle {...article} key={article.index}/>
   );
+  
+  const current={color: 'Yellow'}
 
   // 2.描写内容を準備
   return (
@@ -121,16 +124,28 @@ function App() {
           <MyCheckMulti /><br/>
           <MyFile /><br/>
           <MyLife /><br/>
-          {/* 3. ルーティング経由のリンクリストを準備 */}
+          {/* ルーティング経由のリンクリストを準備 */}
           <ul>
             <li><Link to="/">Hello</Link></li>
-            <li><Link to="/life">Time</Link></li>
+            <li><Link to="/life" activeStyle={current}>Time</Link></li>
             <li><Link to="/textarea">Textarea</Link></li>
           </ul>
-          {/* 2. ルーティング設定（条件にマッチしたコンポーネントを出力） */}
+          <ul>
+            {/* 2. ルートパラメーター付きのリンク */}
+            <li><Link to="/topic/13">記事No.13</Link></li>
+            <li><Link to="/topic/108">記事No.108</Link></li>
+          </ul>
+          <ul>
+            <li><NavLink exact to="/" activeStyle={current}>トップ</NavLink></li>
+            <li><NavLink to="/hello" activeStyle={current}>Hello2</NavLink></li>
+          </ul>
+          {/* ルーティング設定（条件にマッチしたコンポーネントを出力） */}
             <Route exact path="/" component={MyHello} />
             <Route path="/life" component={MyLife} />
             <Route path="/textarea" component={MyTextarea} />
+          {/* 1. ルートパラメーターを含んだルート */}
+            <Route component={MyHello} />
+            <Route path="/topic/:id" component={MyTopic} /> 
         </main>
       </div>
     </Router>
